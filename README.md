@@ -1,81 +1,97 @@
-# 💸 Finchat – AI Personal Finance Assistant
-> *Um conceito de aplicativo desenvolvido via Vibe Coding (IA-First)*
+<div align="center">
 
-Status | AI Powered  
-Author | Marcus Vasconcellos
+# 💸 Finchat AI
+### Seu Assistente Financeiro Pessoal
+
+> *Um conceito de aplicativo desenvolvido 100% via Vibe Coding (IA-First)*
+
+![Status MVP](https://img.shields.io/badge/Status-MVP%20Ativo-success?style=for-the-badge)
+![AI Powered](https://img.shields.io/badge/AI-Powered-blue?style=for-the-badge&logo=openai&logoColor=white)
+![Vibe Coding](https://img.shields.io/badge/Methodology-Vibe%20Coding-blueviolet?style=for-the-badge)
+
+[**Experimentar o App Agora**](https://finchat-dio.lovable.app/)
+
+</div>
 
 ---
 
 ## 📋 Sobre o Projeto
 
-Este repositório não contém apenas código; ele documenta o processo de **Vibe Coding** utilizado para conceber um aplicativo de finanças pessoais inovador.
+Este repositório vai além do código: ele é a documentação viva de um processo de **Vibe Coding** utilizado para conceber um aplicativo financeiro do zero.
 
-O objetivo foi atuar como "Tech Lead" de ferramentas de IA (Copilot, Lovable), guiando-as através de prompts intencionais para gerar uma solução completa — desde o conceito até a validação técnica — sem escrever manualmente cada linha de código.
+O objetivo foi atuar não como programador tradicional, mas como **"Tech Lead" de IAs** (Copilot, Lovable), guiando-as através de prompts estratégicos para gerar uma solução completa — do conceito à validação — minimizando a escrita manual de código.
 
 ---
 
 ## ✨ O que é Vibe Coding?
 
-> **Vibe Coding** é programar com foco na intenção e no contexto, não apenas na sintaxe.  
-> É a arte de traduzir uma ideia (a "vibe") em um produto funcional através de conversas estruturadas com IAs.
+<div align="center">
 
-Em vez de quebrar a cabeça com a implementação detalhada, você gerencia a IA para que ela construa a solução baseada na sua visão estratégica.
+> "Vibe Coding é programar com foco na **intenção** e no **contexto**, não apenas na sintaxe. É a arte de traduzir uma ideia (a 'vibe') em um produto funcional através de conversas estruturadas com IAs."
+
+</div>
+
+Em vez de lutar com detalhes de implementação, o foco muda para o gerenciamento da IA, garantindo que ela construa a solução alinhada à sua visão estratégica.
 
 ---
 
 ## 🎯 O Desafio
 
-| Problema 😫 | Solução Proposta 💡 |
-|------------|---------------------|
-| Apps financeiros tradicionais são chatos, exigem muita entrada manual e falham em manter o usuário engajado a longo prazo. | Um **Assistente Financeiro via Chat**. O usuário conversa naturalmente ("Gastei 50 reais em pizza"), e a IA classifica, registra e dá dicas personalizadas em tempo real. |
+| Problema 😫 | Solução Proposta (Finchat) 💡 |
+| :--- | :--- |
+| Apps financeiros tradicionais são burocráticos, exigem muita entrada manual e falham no engajamento a longo prazo. | Um **Assistente via Chat**. O usuário fala naturalmente (*"Gastei cinquentão em pizza"*), e a IA classifica, registra e dá dicas em tempo real. |
 
 ---
 
-## 🧪 Processo de Criação
+## 🧪 Processo de Criação (The Vibe Flow)
 
 O desenvolvimento seguiu um fluxo estruturado para garantir que a IA entendesse perfeitamente a "vibe" do produto.
 
-### 1. Definição de Intenção (PRD)
+### 1. 🧠 Definição de Intenção (PRD)
+Criação de um *Product Requirements Document* simplificado para servir como "super prompt" inicial.
+> 📄 [Ver documento de Prompt Inicial](docs/prompt-final.md)
 
-Criação de um *Product Requirements Document* simplificado para servir como "super prompt" inicial.  
-> 📄 **Ver documento:** docs/prompt-final.md
+### 2. 🤝 Vibe Check & Ideação
+Refinamento da ideia com parceiros de IA (Copilot/ChatGPT):
+* Definição da persona do "Agente Financeiro" (Nino: amigável, sem "economês").
+* Brainstorming de funcionalidades-chave.
 
-### 2. Vibe Check & Ideação com IA
+### 3. 📐 Prototipação Conceitual
+Geração de fluxos de usuário e wireframes de baixa fidelidade via prompts textuais.
+> 🗺️ [Ver fluxo de telas](docs/fluxo-telas.md)
 
-Utilização de IA (Copilot/ChatGPT) para refinar a ideia:
-- Definição da persona do "Agente Financeiro" (amigável, sem jargões)
-- Brainstorming de funcionalidades-chave
+### 4. 🏗️ Planejamento Técnico (MVP)
+Solicitação à IA para definir a stack tecnológica mais enxuta para validação rápida.
 
-### 3. Prototipação Conceitual
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white)
+![Lovable](https://img.shields.io/badge/Lovable.dev-FF5A5F?style=flat&logo=l&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white)
 
-Geração de fluxos de usuário e wireframes de baixa fidelidade via prompts.  
-> 📐 **Ver fluxo:** docs/fluxo-telas.md
-
-### 4. Planejamento Técnico (MVP)
-
-Solicitação à IA para definir a stack tecnológica e o plano de validação mais enxuto possível.  
-> 🚀 **Ver plano:** docs/mvp-plano.md
-
----
-
-## 🔑 Funcionalidades-Chave do Conceito
-
-- [x] **Registro via Chat Natural:** "Paguei a conta de luz, R$150" → *Registrado automaticamente em 'Contas Essenciais'.*
-- [x] **Agente Proativo:** O app manda mensagens como: "Vi que você gastou menos com delivery essa semana. Que tal guardar essa diferença?"
-- [x] **Metas Inteligentes:** Criação de objetivos de economia baseados no histórico de gastos real do usuário.
-- [x] **Relatórios Conversacionais:** Em vez de gráficos complexos, resumos em texto simples: "Este mês você gastou 10% a mais em lazer do que no mês passado."
+> 🚀 [Ver plano do MVP](docs/mvp-plano.md)
 
 ---
 
-## 📸 Galeria de Interações
+## 🔑 Funcionalidades-Chave
+
+* ✅ **Registro via Chat Natural**
+    * *"Paguei a luz, R$150"* → Registrado automaticamente em 'Contas Essenciais'.
+* ✅ **Agente Proativo**
+    * O app inicia a conversa: *"Vi que você economizou no delivery essa semana. Boa!"*
+* ✅ **Metas Inteligentes**
+    * Objetivos de economia baseados no seu histórico real de gastos.
+* ✅ **Relatórios Conversacionais**
+    * Resumos simples em texto, sem gráficos confusos.
+
+---
+
+## 📸 Bastidores (Vibe Gallery)
 
 *Exemplos reais do processo de "conversa" com a IA para gerar este projeto.*
 
-- Print da Conversa com IA 1  
-  *Fig 1: Refinando o tom de voz do agente*
-
-- Print da Conversa com IA 2  
-  *Fig 2: Gerando o fluxo de telas*
+| Refinando o Tom de Voz | Gerando Fluxos de Tela |
+|:---:|:---:|
+| ![Print Conversa 1](https://placehold.co/400x300/EEE/31343C?text=Intera%C3%A7%C3%A3o+IA+1) | ![Print Conversa 2](https://placehold.co/400x300/EEE/31343C?text=Fluxo+Gerado+por+IA) |
+*(Placeholders: Substitua pelos prints reais)*
 
 ---
 
@@ -83,19 +99,28 @@ Solicitação à IA para definir a stack tecnológica e o plano de validação m
 
 Este desafio demonstrou que a barreira de entrada para criar produtos digitais complexos diminuiu drasticamente.
 
-- **O que funcionou:** A estruturação prévia do PRD (o "briefing") fez com que a IA gerasse resultados incrivelmente alinhados na primeira tentativa.
-- **Aprendizado chave:** A qualidade do output da IA é diretamente proporcional à clareza da sua intenção. Vibe Coding não é sobre pedir "crie um app", mas sobre saber *como* pedir.
+> **Aprendizado chave:** A qualidade do output da IA é diretamente proporcional à clareza da sua intenção. Vibe Coding não é sobre pedir *"crie um app"*, mas sobre saber **como** pedir.
 
 ---
 
-## 🌐 Acesse o FinChat
+<div align="center">
 
-Você pode testar o MVP do FinChat diretamente no navegador:
+## 🌐 Acesse o FinChat (MVP)
 
-👉 https://finchat-dio.lovable.app/
+Você pode testar o produto diretamente no navegador.
 
-> O FinChat está em fase de validação. Sinta-se à vontade para explorar, registrar seus gastos e interagir com o agente Nino. Sua experiência nos ajuda a evoluir o produto!
+### [👉 Clique aqui para conversar com o Nino 👈](https://finchat-dio.lovable.app/)
+
+*O FinChat está em fase de validação. Sinta-se à vontade para explorar e registrar gastos fictícios (ou reais!). Sua experiência ajuda a evoluir a IA.*
+
+</div>
 
 ---
 
-Desenvolvido com 🧠 e 🤖 por Marcus Vasconcellos
+<div align="center">
+
+Desenvolvido com 🧠 humana e 🤖 artificial por **Marcus Vasconcellos**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/marcusvadconcellos)
+
+</div>
