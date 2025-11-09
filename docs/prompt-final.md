@@ -1,26 +1,168 @@
-# MISSÃO
-Você é o Tech Lead e Product Designer de uma startup. Sua missão é estruturar o conceito do "FinChat" (nome provisório), um assistente financeiro pessoal baseado inteiramente em interfaces conversacionais (CUI - Conversational User Interface).
+# FinChat – Product Requirements Document (PRD)
 
-# MANIFESTO DO PRODUTO (A "VIBE")
-Nós acreditamos que controlar finanças não deve ser chato. Nosso app não é uma calculadora, é um companheiro financeiro. Ele deve ser:
-- **Invisível:** O máximo de automação possível.
-- **Empático:** Nunca julga os gastos do usuário, apenas orienta.
-- **Simples:** Se parece com uma planilha, nós falhamos.
+## 🧭 Visão Geral
 
-# DETALHAMENTO DAS FUNCIONALIDADES
-Para cada funcionalidade abaixo, eu preciso que você defina *como* ela funciona no back-end conceitual e dê um exemplo de interação no front-end (chat):
+**Nome do Produto**: FinChat (nome provisório)
+**Tipo de Produto**: Assistente financeiro pessoal baseado em interface conversacional (CUI)
+**Objetivo**: Ajudar usuários a gerenciar suas finanças de forma leve, empática e motivadora, por meio de conversas naturais e encantadoras.
 
-1.  **Input Multimodal:** Aceitar texto ("gastei 30 no uber"), voz (áudio transcrito) e idealmente leitura de comprovantes (imagens).
-2.  **Categorização Contextual:** O agente deve aprender com o usuário. Se ele sempre classifica "Padaria da Esquina" como "Lazer" (e não alimentação), o agente deve se adaptar.
-3.  **Feedback Loop (Agente Proativo):** O agente não espera o usuário perguntar. Ele deve analisar padrões e sugerir ações: "Parece que se você economizar R$5 por dia, atinge sua meta de viagem 1 semana antes. Topa tentar?".
-4.  **Micro-Relatórios:** Cards visuais simples dentro do chat que resumem a semana, sem precisar sair da tela de conversa.
+---
 
-# RESTRIÇÕES DO MVP
-- Deve ser mobile-first.
-- Foco total na rapidez de inserção (o usuário deve gastar menos de 5 segundos para registrar algo).
+## ✨ Manifesto do Produto
 
-# O QUE VOCÊ DEVE ENTREGAR
-1.  **Persona do Agente:** Defina o nome, tom de voz e 3 regras de comportamento do nosso assistente IA.
-2.  **Jornada do Usuário (Dia 1):** Descreva passo a passo a primeira interação de um novo usuário com o app.
-3.  **Stack Tecnológica Sugerida:** Que ferramentas de IA e frameworks (ex: React Native, OpenAI API, etc.) você recomenda para este MVP e por quê?
-4.  **Plano de Validação de Hipótese:** Como vamos medir se as pessoas realmente preferem conversar a usar formulários? Defina 1 métrica principal (North Star Metric).
+> Controlar finanças não deve ser chato.
+> FinChat não é uma calculadora, é um companheiro financeiro.
+> Ele deve ser:
+- **Invisível**: Automatizado ao máximo.
+- **Empático**: Nunca julga, sempre orienta.
+- **Simples**: Se parece com uma planilha, falhamos.
+
+---
+
+## 👤 Persona do Agente
+
+**Nome**: Nino
+**Tom de Voz**: Inspirador e motivacional
+- Fala como um amigo que acredita no potencial do usuário
+- Usa frases positivas, celebra conquistas e transmite confiança
+- Emojis são usados com moderação para reforçar leveza e afeto
+
+**Regras de Comportamento**:
+1. Motiva sem pressionar
+2. Celebra o progresso, não a perfeição
+3. Adapta o tom à jornada emocional do usuário
+
+---
+
+## 🛤️ Jornada do Usuário – Dia 1
+
+1. Boas-vindas com saudação calorosa
+2. Onboarding leve com definição de meta
+3. Primeiro registro de despesa via texto ou voz
+4. Confirmação empática e sugestão de categoria
+5. Micro-relatório com resumo da semana
+6. Sugestão proativa para ajudar na meta
+
+---
+
+## 🔧 Funcionalidades do MVP
+
+### 1. Input Multimodal com Toque Humano
+
+**Back-end**:
+- NLP para texto
+- Whisper (OpenAI) para voz
+- Google Vision API para OCR
+- Fallbacks amigáveis para entradas ambíguas
+
+**Exemplo de Chat**:
+Usuário: Gastei 30 no Uber.
+Nino: Uber é vida, né? 🚗 Já anotei R$30 em Transporte. Quer salvar esse trajeto como favorito?
+
+---
+
+### 2. Categorização Contextual com Memória Afetiva
+
+**Back-end**:  
+- Aprendizado contínuo com correções manuais  
+- Associação afetiva com estabelecimentos e categorias
+
+**Exemplo de Chat**:
+
+Usuário: Padaria da Esquina, R$15.
+Nino: Ah, aquele pãozinho que alegra o dia! 😊 Costuma entrar como “Lazer”, tudo certo?
+
+---
+
+### 3. Feedback Proativo com Delicadeza
+
+**Back-end**:  
+- Regras de negócio + modelos preditivos simples  
+- Sugestões motivacionais baseadas em metas e padrões
+
+**Exemplo de Chat**:
+
+Nino: Se você guardar R$5 por dia, sua viagem dos sonhos chega 1 semana antes. ✨ Que tal tentar?
+
+---
+
+### 4. Micro-Relatórios com Encanto Visual
+
+**Back-end**:  
+- Agregação de dados semanais  
+- Cards visuais com destaques positivos e frases motivacionais
+
+**Exemplo de Chat**:
+
+Nino: Aqui está seu resumo da semana! 🎉
+
+Total gasto: R$450
+🥇 Destaque: Alimentação bem controlada!
+💡 Dica: Que tal revisar os gastos com transporte?
+
+
+---
+
+## 📱 Interface Inicial
+
+**Descrição**:  
+Tela mobile-first, centrada em chat. Sem dashboards. Apenas Nino e o campo de entrada.
+
+**Elementos**:
+- Saudação do Nino  
+- Campo de texto  
+- Ícone de microfone  
+- Ícone de anexo
+
+**Exemplo**:
+
+Nino: Olá, Marcus! Que bom te ver por aqui. Pronto para transformar sua relação com o dinheiro? Cada passo conta, e eu tô com você nessa! 🚀
+[Campo de texto] [🎤] [📎]
+
+---
+
+## 🧰 Stack Tecnológica Sugerida
+
+- **Frontend**: React Native  
+- **Backend**: Node.js + Firebase  
+- **IA e NLP**:
+  - OpenAI API (chat e sugestões)  
+  - Whisper (voz)  
+  - Google Vision API (OCR)
+
+**Justificativa**:  
+Tecnologias maduras, com boa documentação e integração rápida para MVP mobile-first.
+
+---
+
+## 📊 Plano de Validação de Hipótese
+
+**Hipótese**:  
+Usuários preferem conversar com o app a preencher formulários.
+
+**North Star Metric**:  
+% de registros feitos via chat vs. formulários alternativos
+
+**Método de Validação**:
+- Teste A/B  
+- Entrevistas qualitativas  
+- Análise de tempo médio por registro
+
+---
+
+## 📈 Métricas Secundárias
+
+1. **Tempo Médio de Registro**
+   - Mede: Agilidade da interface  
+   - Coleta: Timestamps de início/fim  
+   - Relevância: Valida a restrição de <5s por registro
+
+2. **Taxa de Uso de Input Multimodal**
+   - Mede: Adoção de voz e imagem  
+   - Coleta: Logs por tipo de input  
+   - Relevância: Avalia aceitação dos canais alternativos
+
+3. **Engajamento com Sugestões Proativas**
+   - Mede: % de sugestões aceitas  
+   - Coleta: Interações com mensagens proativas  
+   - Relevância: Valida o papel do agente como parceiro ativo
