@@ -90,8 +90,7 @@ Solicitação à IA para definir a stack tecnológica mais enxuta para validaç�
 
 | Refinando o Tom de Voz | Gerando Fluxos de Tela |
 |:---:|:---:|
-| ![Print Conversa 1](https://placehold.co/400x300/EEE/31343C?text=Intera%C3%A7%C3%A3o+IA+1) | ![Print Conversa 2](https://placehold.co/400x300/EEE/31343C?text=Fluxo+Gerado+por+IA) |
-*(Placeholders: Substitua pelos prints reais)*
+| ![Print Conversa 1](https://github.com/celloweb-ai/AI_Personal_Finance_Assistant/blob/main/assets/exemplo-conversa-1.png) | ![Print Conversa 2](https://github.com/celloweb-ai/AI_Personal_Finance_Assistant/blob/main/assets/exemplo-conversa-2.png) |
 
 ---
 
